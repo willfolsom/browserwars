@@ -1,0 +1,58 @@
+<div class="text-center">
+    <h3 class="header">B R O W S E R W A R S</h3>
+</div>
+
+<div class="row" id="armyContainer">
+    <div class="col"></div>
+    <div class="col-md-4">
+        <color-input (select)="changeArmyColor($event)"></color-input>
+        <div class="row">
+            <div *ngFor="let unit of goodArmy">
+                <div class="unit">
+                    <div class="unitImage"><img [src]="unit.img"></div>
+                    <p class="unitName">{{unit.name}}</p>
+                    <h6><img [src]="unit.heartIcon" width="20px" class="healthicon">{{unit.health}}</h6>
+                    <p><img src="app/assets/icons/sword.png" width="14px" class="icon">{{unit.attack}}️<br/>
+                        <img src="app/assets/icons/shield.png" width="14px" class="icon">{{unit.defense}}<br/>
+                        <img src="app/assets/icons/speed.png" width="14px" class="icon">{{unit.speed}}<br/>
+                        <img src="app/assets/icons/die.png" width="14px" class="icon">{{unit.luck}}</p>
+                </div>
+                <div class="counts">
+                    <p class="unitKills" *ngIf="unit.killed.length">{{unit.killed.length}} KILLS</p>
+                    <p class="killedBy" *ngIf="unit.deathBy"><img src="app/assets/icons/skull.png" width="14px" class="icon" style="margin-left: -3px;">{{unit.deathBy.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h6 class="robots">ROBOTS</h6>
+        <div class="row text-white">
+            <div *ngFor="let unit of badArmy">
+                <div class="unit bg-inverse">
+                    <div class="unitImage"><img [src]="unit.img"></div>
+                    <p class="unitName">{{unit.name}}</p>
+                    <h6><img [src]="unit.heartIcon" width="20px" class="healthicon">{{unit.health}}</h6>
+                    <p><img src="app/assets/icons/sword.png" width="14px" class="icon">{{unit.attack}}️<br/>
+                        <img src="app/assets/icons/shield.png" width="14px" class="icon">{{unit.defense}}<br/>
+                        <img src="app/assets/icons/speed.png" width="14px" class="icon">{{unit.speed}}<br/>
+                        <img src="app/assets/icons/die.png" width="14px" class="icon">{{unit.luck}}</p>
+                </div>
+                <div class="counts">
+                    <p class="unitKills" *ngIf="unit.killed.length">{{unit.killed.length}} KILLS</p>
+                    <p class="killedBy" *ngIf="unit.deathBy"><img src="app/assets/icons/skull.png" width="14px" class="icon" style="margin-left: -3px;">{{unit.deathBy.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+
+<div id="logger" *ngIf="logger[0] != ''">
+    <div class="badLog">{{logger[0]}}</div>
+    <div class="goodLog" [ngStyle]="{'color': color}">{{logger[1]}}</div>
+    <div class="endLog"><h6>{{logger[2]}}</h6></div>
+</div>
+
+<div class="text-center">
+    <button type="button" class="btn btn-info" id="fightButton" (click)="fight()">{{ actionText }}</button>
+</div>
