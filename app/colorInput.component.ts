@@ -1,3 +1,5 @@
+/** Dropdown component that allows for custom color to be chosen */
+
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({

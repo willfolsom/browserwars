@@ -55,6 +55,7 @@ var CombatService = (function () {
      */
     CombatService.prototype.initArmies = function (color) {
         this.noWinner = true;
+        this.logger = ['', '', ''];
         this._goodArmy = this.newArmy(color);
         this._badArmy = this.newArmy('robo');
         return [this._goodArmy, this._badArmy];
@@ -76,6 +77,7 @@ var CombatService = (function () {
         army.alive = units.length;
         return army;
     };
+    /** changes each units img reference to different color */
     CombatService.prototype.recolorArmy = function (color) {
         for (var u in this._goodArmy._units) {
             this._goodArmy._units[u].img = 'app/assets/' +

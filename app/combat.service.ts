@@ -29,10 +29,11 @@ export class CombatService {
     }
 
     /**
-     * Creating and manipluating army functions
+     * Creating and manipulating army functions
      */
     initArmies(color: string): Array<Army> {
         this.noWinner = true;
+        this.logger = ['', '', ''];
         this._goodArmy = this.newArmy(color);
         this._badArmy = this.newArmy('robo');
         return [this._goodArmy, this._badArmy];
@@ -60,6 +61,7 @@ export class CombatService {
         return army;
     }
 
+    /** changes each units img reference to different color */
     recolorArmy(color:string) {
         for (let u in this._goodArmy._units) {
             this._goodArmy._units[u].img = 'app/assets/' +

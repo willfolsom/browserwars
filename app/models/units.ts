@@ -13,6 +13,7 @@ export class Unit {
     img: string;
 
     get heartIcon(): string {
+        /** determine which color heart to use based on health */
         if (this.health > 2*this.startHealth/3) return 'app/assets/icons/heart_green.png';
         else if (this.health > this.startHealth/3) return 'app/assets/icons/heart_yellow.png';
         return 'app/assets/icons/heart_red.png';
@@ -27,7 +28,7 @@ export class Unit {
 }
 
 /**
- * translates to 0, 1, 2 for easier img naming
+ * translates to 0, 1, 2 for easier img naming and asset mgmt
  */
 enum Type {
     infantry,
@@ -40,7 +41,6 @@ export class Infantry extends Unit {
     type = Type.infantry;
     health = 4;
     startHealth = 4;
-    alive: true;
     attack = 4;
     defense = 3;
     speed = 2;
@@ -52,7 +52,6 @@ export class Tank extends Unit {
     type = Type.tank;
     health = 9;
     startHealth = 9;
-    alive: true;
     attack = 6;
     defense = 9;
     speed = 3;
@@ -64,7 +63,6 @@ export class Mech extends Unit {
     type = Type.mech;
     health = 7;
     startHealth = 7;
-    alive: true;
     attack = 8;
     defense = 6;
     speed = 1;

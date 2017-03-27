@@ -11,6 +11,7 @@ var Unit = (function () {
     }
     Object.defineProperty(Unit.prototype, "heartIcon", {
         get: function () {
+            /** determine which color heart to use based on health */
             if (this.health > 2 * this.startHealth / 3)
                 return 'app/assets/icons/heart_green.png';
             else if (this.health > this.startHealth / 3)
@@ -34,7 +35,7 @@ var Unit = (function () {
 }());
 exports.Unit = Unit;
 /**
- * translates to 0, 1, 2 for easier img naming
+ * translates to 0, 1, 2 for easier img naming and asset mgmt
  */
 var Type;
 (function (Type) {

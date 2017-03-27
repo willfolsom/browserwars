@@ -7,10 +7,9 @@
     <title>BROWSERWARS</title>
 
     <!-- css -->
-    <!-- load bootstrap and some simple css -->
+    <!-- load some simple css and bootstrap -->
     <link rel="stylesheet" href="app/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <style>body { padding: 50px 0; }</style>
 
     <!-- js -->
     <!-- load polyfills and angular dependencies -->
@@ -18,7 +17,7 @@
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
 
-    <!-- load our angular app with systemjs -->
+    <!-- load angular app with systemjs -->
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="systemjs.config.js"></script>
     <script>
@@ -32,7 +31,7 @@
     <div id="hitch"><img src="app/assets/icons/hitch.png"></div>
 
     <script>
-        /** Simple loop logic to move the background consistently */
+        /** Simple loop logic to move the background constantly */
         var p = document.getElementById("bg"), move = 0;
         setInterval(function() {
             if (move>=64) move=0;
