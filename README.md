@@ -1,4 +1,5 @@
 ### BROWSERWARS
+Turn based Angular 2 application / game.
 - Install: `npm install`
 - Start: `npm start`
 - View the app: <http://localhost:3000>
