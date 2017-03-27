@@ -4,7 +4,7 @@
 - View the app: <http://localhost:3000>
 
 Guide
-- Click to randomly attack the robots until there is a victor.
+- Click to randomly attack the robots until there is a victor
 
 Todo
 - do something with speed / luck stats
