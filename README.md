@@ -3,10 +3,10 @@
 - Start: `npm start`
 - View the app: <http://localhost:3000>
 
-###Guide
+Guide
 - Click to randomly attack the robots until there is a victor.
 
-###Todo
+Todo
 - do something with speed / luck stats
 - change terrain to change unit type
 - add mini icons to logging messages
