@@ -1,5 +1,7 @@
 "use strict";
-var Army = (function () {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Army = void 0;
+var Army = /** @class */ (function () {
     function Army() {
     }
     Object.defineProperty(Army.prototype, "units", {
@@ -9,7 +11,7 @@ var Army = (function () {
         set: function (u) {
             this._units = u;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Army.prototype, "alive", {
@@ -19,7 +21,7 @@ var Army = (function () {
         set: function (num) {
             this._alive = num;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Army.prototype, "dead", {
@@ -29,7 +31,7 @@ var Army = (function () {
         set: function (num) {
             this._dead = num;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     return Army;
