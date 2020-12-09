@@ -11,7 +11,6 @@
   },
   "keywords": [],
   "author": "Will Folsom",
-  "license": "MIT",
   "devDependencies": {
     "@types/node": "^6.0.46",
     "concurrently": "^3.2.0",
