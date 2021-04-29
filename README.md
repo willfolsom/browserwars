@@ -2,7 +2,7 @@
 Advance Wars style turn based Angular 2 game, with sprites, custom color picker, and custom logger.</br>
 Click to randomly attack the robots until there is a victor.
 
-![Browserwars](screeny.png)
+![Browserwars](updated_screenshot.png)
 
 ---
 ### How To
